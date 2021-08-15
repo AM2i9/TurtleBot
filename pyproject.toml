@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "turtlebot"
+version = "0.1.0"
+description = "A bot that allows you to create and run turtle scripts in Discord"
+authors = ["Patrick Brennan (AM2i9)"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Pillow = "^8.3.1"
+
+[tool.poetry.dev-dependencies]
+taskipy = "^1.8.1"
+black = "^21.7b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
