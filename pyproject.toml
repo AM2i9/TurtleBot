@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "turtlebot"
-version = "0.1.0"
+version = "0.1.1"
 description = "A bot that allows you to create and run turtle scripts in Discord"
 authors = ["Patrick Brennan (AM2i9)"]
 license = "MIT"

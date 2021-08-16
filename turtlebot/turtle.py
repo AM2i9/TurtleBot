@@ -11,7 +11,7 @@ class Turtle:
         self._image = Image.new("RGB", (size_x, size_y), bg)
         self._cv = ImageDraw.Draw(self._image)
 
-        self._pos = (0, 0)
+        self._pos = (size_x//2, size_y//2)
         self._angle = 0
 
         self._pen_down = True
