@@ -8,6 +8,8 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.9"
 Pillow = "^8.3.1"
+"discord.py" = "^1.7.3"
+"dislash.py" = "^1.4.6"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.8.1"

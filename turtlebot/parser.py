@@ -1,10 +1,11 @@
 from turtlebot.turtle import Turtle
 
+
 class ParseError(Exception):
     pass
 
-class TurtleLang:
 
+class TurtleLang:
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
@@ -14,11 +15,11 @@ class TurtleLang:
             "L": turtle.left,
             "R": turtle.right,
             "P": turtle.set_pen,
-            "A": turtle.set_angle
+            "A": turtle.set_angle,
         }
-    
+
     def parse(self, script: str):
-        steps = script.split(',')
+        steps = script.split(",")
 
         for i, _step in enumerate(steps):
             step = _step.strip()
@@ -32,6 +33,8 @@ class TurtleLang:
                 raise ParseError(f"Unkown method: '{func}'")
             except ValueError:
                 if value:
-                    raise ParseError(f"'{step[1:]}' is not a valid integer in step {i}: '{step}'.")
+                    raise ParseError(
+                        f"'{step[1:]}' is not a valid integer in step {i}: '{step}'."
+                    )
                 else:
                     raise ParseError(f"Missing value for step {i}: '{step}'")

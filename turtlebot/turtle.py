@@ -27,31 +27,31 @@ class Turtle:
         Turn the turtle right
         """
         self._angle += degrees
-    
+
     def set_angle(self, degrees: int):
         """
         Set the turtles rotation
         """
         self._angle = degrees
-    
+
     def pen_down(self):
         """
         Stop making lines
         """
         self._pen_down = True
-    
+
     def pen_up(self):
         """
         Start making lines
         """
         self._pen_down = False
-    
+
     def set_pen(self, state: bool):
         """
         Set the pen to be up or down
         """
         self._pen_down = bool(state)
-    
+
     def _move(self, pixels: int):
         """
         Move the turtle a certain number of pixels in the direction the turtle
