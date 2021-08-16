@@ -182,6 +182,17 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 test = ["ipaddress", "mock", "unittest2", "enum34", "pywin32", "wmi"]
 
 [[package]]
+name = "python-dotenv"
+version = "0.19.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "dev"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "regex"
 version = "2021.8.3"
 description = "Alternative regular expression module, to replace re."
@@ -242,7 +253,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "1493443bcc58ad58922fbcf3dbde4261012c4c6384faf1a7998e9832c57fb607"
+content-hash = "068d521bf87732ec5dd08e0983fb5b118a80c8509e03d05207dd1a7619f5548d"
 
 [metadata.files]
 aiohttp = [
@@ -445,6 +456,10 @@ psutil = [
     {file = "psutil-5.8.0-cp39-cp39-win32.whl", hash = "sha256:ea372bcc129394485824ae3e3ddabe67dc0b118d262c568b4d2602a7070afdb0"},
     {file = "psutil-5.8.0-cp39-cp39-win_amd64.whl", hash = "sha256:f4634b033faf0d968bb9220dd1c793b897ab7f1189956e1aa9eae752527127d3"},
     {file = "psutil-5.8.0.tar.gz", hash = "sha256:0c9ccb99ab76025f2f0bbecf341d4656e9c1351db8cc8a03ccd62e318ab4b5c6"},
+]
+python-dotenv = [
+    {file = "python-dotenv-0.19.0.tar.gz", hash = "sha256:f521bc2ac9a8e03c736f62911605c5d83970021e3fa95b37d769e2bbbe9b6172"},
+    {file = "python_dotenv-0.19.0-py2.py3-none-any.whl", hash = "sha256:aae25dc1ebe97c420f50b81fb0e5c949659af713f31fdb63c749ca68748f34b1"},
 ]
 regex = [
     {file = "regex-2021.8.3-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:8764a78c5464ac6bde91a8c87dd718c27c1cabb7ed2b4beaf36d3e8e390567f9"},
