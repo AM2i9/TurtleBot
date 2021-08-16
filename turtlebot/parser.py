@@ -24,14 +24,15 @@ class TurtleLang:
         for i, _step in enumerate(steps):
             step = _step.strip()
 
-            func = step[0].upper()
+            
 
             try:
                 value = step[1:]
+                func = step[0].upper()
                 self.functions[func](int(value))
             except KeyError:
                 raise ParseError(f"Unkown method: '{func}'")
-            except ValueError:
+            except (ValueError, IndexError):
                 if value:
                     raise ParseError(
                         f"'{step[1:]}' is not a valid integer in step {i}: '{step}'."
