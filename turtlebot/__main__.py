@@ -9,7 +9,7 @@ from turtlebot.turtle import Turtle
 
 try:
     import dotenv
-    dotenv.load()
+    dotenv.load_dotenv()
 except ImportError:
     pass
 
