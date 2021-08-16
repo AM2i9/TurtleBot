@@ -58,14 +58,9 @@ class Turtle:
         is facing
         """
 
-        if self._angle <= 0:
-            change_x = pixels
-            change_y = 0
+        change_x = round(math.cos(math.radians(self._angle)), 2) * pixels
 
-        else:
-            change_x = round(math.cos(math.radians(self._angle)), 2) * pixels
-
-            change_y = round(math.sin(math.radians(self._angle)), 2) * pixels
+        change_y = round(math.sin(math.radians(self._angle)), 2) * pixels
 
         new_x = self._pos[0] + change_x
         new_y = self._pos[1] + change_y
