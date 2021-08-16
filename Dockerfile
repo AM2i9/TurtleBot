@@ -19,4 +19,4 @@ RUN poetry install --no-dev
 COPY . .
 
 ENTRYPOINT ["python3"]
-CMD ["-m", "bot"]
+CMD ["-m", "turtlebot"]
