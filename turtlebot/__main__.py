@@ -66,7 +66,6 @@ def run_code(_code):
 @turt.interaction_client.command(
     name="help",
     description="Get help on how to use TurtleBot",
-    guild_ids=[852288791167107113],
 )
 async def help(inter):
 
@@ -78,7 +77,6 @@ async def help(inter):
 @turt.interaction_client.command(
     name="draw",
     description="Draw some turtle code.",
-    guild_ids=[852288791167107113],
     options=[Option("code", "Turtle code", required=False)],
 )
 async def draw(inter, code: str = None):
