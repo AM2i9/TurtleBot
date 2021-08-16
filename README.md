@@ -23,3 +23,10 @@ F100,R90,F100,R90,F100,R90,F100,R90
 The following are slash commands:
 - `/help`: Show a message similar to the **Syntax** section above, detailing how to use the bot
 - `/draw <code>`: The command to run your script.
+
+---
+
+### Dev things:
+To run the bot, there must be two enviroment variables set.
+- `TOKEN`: The bot token
+- `LOG_PATH`: A path to the directory in which to store the log file
