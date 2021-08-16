@@ -3,15 +3,19 @@ import os
 import discord
 from dislash import Option
 
+import turtlebot.log
 from turtlebot.bot import TurtleBot
 from turtlebot.parser import TurtleLang, ParseError
 from turtlebot.turtle import Turtle
 
 try:
     import dotenv
+
     dotenv.load_dotenv()
 except ImportError:
     pass
+
+turtlebot.log.setup_log()
 
 drawing_size = (500, 500)
 
@@ -44,12 +48,11 @@ Your script can be run using the `/draw` slash command.
 """
 
 help_embed = discord.Embed(
-    title="TurtleBot",
-    description=bot_description,
-    color=discord.Colour.green()
+    title="TurtleBot", description=bot_description, color=discord.Colour.green()
 )
 
 help_embed.set_footer(text="Created by Patrick Brennan (AM2i9)")
+
 
 def run_code(_code):
     code = _code.replace("`", "")
@@ -58,6 +61,7 @@ def run_code(_code):
 
     parser.parse(code)
     return turtle.save_as_bytes()
+
 
 @turt.interaction_client.command(
     name="help",
@@ -70,13 +74,14 @@ async def help(inter):
         help_embed.set_thumbnail(url=turt.user.avatar_url)
     return await inter.reply(embed=help_embed)
 
+
 @turt.interaction_client.command(
     name="draw",
     description="Draw some turtle code.",
     guild_ids=[852288791167107113],
     options=[Option("code", "Turtle code", required=False)],
 )
-async def slash_draw(inter, code: str = None):
+async def draw(inter, code: str = None):
 
     if not code:
         if not help_embed.thumbnail:
@@ -94,5 +99,6 @@ async def slash_draw(inter, code: str = None):
         f"{inter.author.mention}. Here is your Turtle's drawing!",
         file=discord.File(image, filename="turtle0.png"),
     )
+
 
 turt.run(os.environ.get("TOKEN"))
