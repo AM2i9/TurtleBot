@@ -22,6 +22,7 @@ drawing_size = (500, 500)
 turt = TurtleBot.create()
 
 bot_description = """Draw things using a Turtle script!
+[View on GitHub](https://github.com/AM2i9/TurtleBot)
 
 **Syntax:**
 Commands, or single letters, are given to the bot, followed by a number. The number could be a number of pixels, degrees, or a 1 or 0 for true and false.
@@ -51,7 +52,7 @@ help_embed = discord.Embed(
     title="TurtleBot", description=bot_description, color=discord.Colour.green()
 )
 
-help_embed.set_footer(text="Created by Patrick Brennan (AM2i9)")
+help_embed.set_footer(text="Created by Patrick Brennan (AM2i9).")
 
 
 def run_code(_code):
