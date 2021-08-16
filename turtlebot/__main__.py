@@ -35,6 +35,12 @@ F100,R90,F100,R90,F100,R90,F100,R90
 - `R<n>`: Turn the pointer right `n` degrees.
 - `A<n>`: Set the angle of the pointer.
 - `P<n>`: Set the pen state. `n` can be `0` for off, `1` for on.
+
+**Running your script:**
+Your script can be run using the `/draw` slash command.
+```
+/draw <code>
+```
 """
 
 help_embed = discord.Embed(
